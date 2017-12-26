@@ -1,0 +1,40 @@
+{
+    "_id": {
+       "type": "ObjectID()",
+       "required": true,
+       "unique": true
+    },
+    "PACKAGE": {
+       "type": "number",
+       "required": true,
+       "populate": "syl_system_packages",
+       "populate-key": "PACKAGE_ID"
+    },
+    "CLIENT": {
+       "type": "number",
+       "required": true,
+       "populate": "syl_system_clients",
+       "populate-key": "CLIENT_ID"
+    },
+    "CREATE_TIME": {
+       "type": "timestamp",
+       "date-format": "YYYY-MM-DD HH:MM:SS",
+       "pattern": "/(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d.d+([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d([+-][0-2]d:[0-5]d|Z))/",
+       "uses": "moment()"
+    },
+    "UPDATE_TIME": {
+       "type": "timestamp",
+       "date-format": "YYYY-MM-DD HH:MM:SS",
+       "pattern": "/(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d.d+([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d([+-][0-2]d:[0-5]d|Z))/",
+       "uses": "moment()"
+    },
+    "RENEWAL_TIME": {
+       "type": "timestamp",
+       "date-format": "YYYY-MM-DD HH:MM:SS",
+       "pattern": "/(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d.d+([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d([+-][0-2]d:[0-5]d|Z))/",
+       "uses": "moment()"
+    },
+    "TERMS_AND_CONDITIONS": {
+       "type": "string"
+    }
+ }

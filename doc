@@ -1,0 +1,70 @@
+Page list
+me/accounts/
+
+page posts
+859239234224947/posts?fields=id&until=2017-10-17&since=2017-10-15
+
+page post reach Total
+859239234224947_864649750350562/insights/post_impressions_unique/
+
+page post reach Paid
+859239234224947_864649750350562/insights/post_impressions_paid_unique/
+
+Daily reach average
+Loop(859239234224947/insights/page_impressions?since=2017-10-14&until=2017-10-20&period=day)   / Date range tilltoday
+
+Daily reach Total
+Loop(859239234224947/insights/page_impressions?since=2017-10-14&until=2017-10-20&period=day)
+
+Posts reach average
+Loop(859239234224947/insights/page_posts_impressions_paid_unique?since=2017-10-14&until=2017-10-20&period=day)   / Date range tilltoday
+
+Posts reach Total
+Loop(859239234224947/insights/page_posts_impressions_paid_unique?since=2017-10-14&until=2017-10-20&period=day)
+
+Comments
+Loop every post in (comment)
+859239234224947/insights/page_positive_feedback_by_type/
+
+Post likes
+Loop every post in (like)
+859239234224947/insights/page_positive_feedback_by_type/
+page likes
+Loop 
+859239234224947/insights/page_fan_adds/?since=2017-10-15&until=2017-10-30
+shares
+Loop every post in (link)
+859239234224947/insights/page_positive_feedback_by_type/
+
+CTA
+Loop
+859239234224947/insights/page_total_actions/?since=2017-10-15&until=2017-10-30
+
+Engagemnt rate Done
+{loop(859239234224947/insights/page_post_engagements/?since=2017-10-15&until=2017-10-30) / Daily reach Total } * 100
+
+Conversion rate
+(CTA / Daily reach Total )* 100
+
+
+
+Spending:
+get accounts from here
+me/adaccounts?fields=account_status
+filter where statue equal 1
+loop on every account
+act_10207395644961932/adcreatives?fields=ad_id,object_id&limit=10000&since=2017-10-1&until=2017-11-1
+Get from it the spent value
+the sum of itis the spent for these posts
+(Check how to activate the sinceand until)
+get unique impressions from these ads
+cost of every 1000 impressions
+5 --6-- 7
+reach supposed to be done (grey)
+days passed from package / total days of package * reach target of package
+reach done (black)
+unique impressions from these ads
+posts supposed to be done (grey)
+floor(days passed from package / total days of package * posts target of package)
+posts done (black)
+from database

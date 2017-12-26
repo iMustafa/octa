@@ -1,0 +1,56 @@
+{
+    "_id": {
+        "type": "ObjectID()",
+        "required": true,
+        "unique": true
+     },
+     "STATE": {
+         "type": "boolean",
+         "required": true,
+         "default": true,
+         "desc": "Determine whether the package is activated or not."
+     },
+     "SUBSCRIBED_PAGES": {
+        "type": "array",
+        "default": "[]", //Empty Array
+        "populate": "syl_system_clients",
+        "populate-key": "CLIENT_ID"
+     },
+     "DESCRIPTION": {
+         "type": "string"
+     },
+     "REACH": {
+         "type": "number",
+         "required": true
+     },
+     "POSTS": {
+         "type": "number",
+         "required": true
+     },
+     "PRICE": {
+         "type": "number",
+         "required": true
+     },
+     "DESIGNS": {
+         "type": "number",
+         "requied": true
+     },
+     "NOTES": {
+         "type": "string"
+     },
+     "TERMS_AND_CODITIONS": {
+         "type": "string"
+     },
+     "CREATE_TIME": {
+        "type": "timestamp",
+        "date-format": "YYYY-MM-DD HH:MM:SS",
+        "pattern": "/(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d.d+([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d([+-][0-2]d:[0-5]d|Z))/",
+        "uses": "moment()"
+     },
+     "UPDATE_TIME": {
+        "type": "timestamp",
+        "date-format": "YYYY-MM-DD HH:MM:SS",
+        "pattern": "/(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d.d+([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d:[0-5]d([+-][0-2]d:[0-5]d|Z))|(d{4}-[01]d-[0-3]dT[0-2]d:[0-5]d([+-][0-2]d:[0-5]d|Z))/",
+        "uses": "moment()"
+     }
+}
